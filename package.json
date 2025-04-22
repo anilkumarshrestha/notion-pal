@@ -1,0 +1,12 @@
+{
+    "name": "notion-pal",
+    "version": "1.0.0",
+    "scripts": {
+        "build:chrome": "zip -r notion-pal-chrome.zip manifest.json contentScript.js icons/",
+        "build:firefox": "web-ext build --source-dir . --artifacts-dir web-ext-artifacts",
+        "build": "npm run build:chrome && npm run build:firefox"
+    },
+    "dependencies": {
+        "web-ext": "^8.5.0"
+    }
+}
